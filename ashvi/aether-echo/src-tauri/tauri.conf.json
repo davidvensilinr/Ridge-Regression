@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "AetherEcho",
+  "version": "0.1.0",
+  "identifier": "com.aetherecho.app",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../build"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "AetherEcho",
+        "width": 900,
+        "height": 680,
+        "minWidth": 780,
+        "minHeight": 580,
+        "center": true,
+        "resizable": true,
+        "decorations": true,
+        "transparent": false,
+        "alwaysOnTop": false,
+        "skipTaskbar": false,
+        "visible": true,
+        "url": "/"
+      },
+      {
+        "label": "overlay",
+        "title": "AetherEcho Overlay",
+        "width": 480,
+        "height": 320,
+        "minWidth": 320,
+        "minHeight": 160,
+        "x": 20,
+        "y": 20,
+        "resizable": true,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "visible": false,
+        "url": "/overlay",
+        "shadow": false,
+        "contentProtected": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.groq.com ipc: http://ipc.localhost; img-src 'self' data: asset: https://asset.localhost",
+      "capabilities": ["main-capability", "overlay-capability"]
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "wix": {},
+      "nsis": {}
+    }
+  }
+}

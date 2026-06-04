@@ -1,0 +1,50 @@
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Node.js / Frontend Svelte / Vite
+node_modules/
+/build/
+/dist/
+/.svelte-kit/
+package-lock.json.log
+yarn-error.log
+pnpm-debug.log
+npm-debug.log*
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Environment variables & secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+!.env.example
+
+# IDEs & Editors
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Rust / Cargo / Tauri
+/src-tauri/target/
+/src-tauri/gen/schemas/
+
+# Temporary / Scratch Files
+/scratch/
+*.tmp
+*.temp
+*.log

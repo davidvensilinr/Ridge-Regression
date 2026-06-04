@@ -1,0 +1,25 @@
+[[permission]]
+identifier = "allow-all-custom-commands"
+description = "Enables all local custom application commands"
+commands = { allow = [
+  "save_api_key",
+  "get_api_key",
+  "has_api_key",
+  "delete_api_key",
+  "test_api_key",
+  "start_listening",
+  "stop_listening",
+  "get_status",
+  "toggle_overlay",
+  "set_overlay_opacity",
+  "set_overlay_click_through",
+  "get_settings",
+  "save_settings",
+  "get_audio_devices",
+  "get_available_models",
+  "check_model_exists",
+  "download_model",
+  "show_main_window",
+  "solve_screen_capture",
+  "solve_screen_region"
+] }
